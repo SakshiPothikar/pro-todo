@@ -9,7 +9,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.use = (express.static(path.join(__dirname, "dist")))
+app.use(express.static(path.join(__dirname, "dist")))
 
 app.use("/api/admin", require("./routes/todoroutes"))
 app.use("*", (req, res) => {
